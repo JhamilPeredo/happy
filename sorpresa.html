@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Sorpresa 🎶</title>
+<style>
+  body {
+    margin: 0;
+    padding: 20px;
+    background-color: #FFC0CB;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    text-align: center;
+    color: black;
+  }
+
+  h1, p {
+    color: black;
+    -webkit-text-stroke: 1px red;
+    text-shadow: none;
+    margin: 10px auto;
+    max-width: 1000px;
+  }
+
+  /* Título en mayúsculas y en una sola línea */
+  h1 {
+    font-size: 50px;
+    text-transform: uppercase;
+    white-space: nowrap; /* evita que se divida en varias líneas */
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  p { 
+    font-size: 24px; 
+    text-align: justify; 
+    line-height: 1.25; 
+  }
+
+  /* Contenedor principal con forma de corazón */
+  .corazon-unico {
+    position: relative;
+    width: 650px;
+    height: 450px;
+    margin: 30px auto;
+    box-shadow: 0 0 25px rgb(92, 18, 18);
+    clip-path: url(#forma-corazon);
+    overflow: hidden;
+  }
+
+  .corazon-unico .img-container {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .corazon-unico .img-container.left { left: 0; }
+  .corazon-unico .img-container.right { right: 0; }
+
+  .corazon-unico .img-container img {
+    position: relative;
+    width: 115%;
+    height: auto;
+    top: -20%;
+    left: -10%;
+  }
+
+  .fila {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .fila img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgb(92, 18, 18);
+    transition: transform 0.3s; /* efecto hover opcional */
+  }
+
+  .fila img:hover {
+    transform: scale(1.1);
+  }
+
+  @media (max-width: 800px) {
+    .corazon-unico { width: 90%; height: 400px; }
+    .fila img { width: 220px; height: 220px; }
+    h1 { font-size: 40px; }
+    p { font-size: 18px; }
+  }
+
+  @media (max-width: 600px) {
+    .fila img { width: 150px; height: 150px; }
+    h1 { font-size: 30px; }
+  }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute;">
+  <defs>
+    <clipPath id="forma-corazon">
+      <path d="M325 445 L40 180 C-45 20, 140 -50, 325 100 C510 -50, 710 20, 610 180 Z" />
+    </clipPath>
+  </defs>
+</svg>
+
+<h1>💖 FELIZ CUMPLEAÑOS MI AMOR 💖</h1>
+
+<p>
+  Mi niña… 💖✨<br><br>
+  Hoy celebro la suerte de tenerte en mi vida. Que cada día esté lleno de alegría, amor y sueños cumplidos. Eres lo más hermoso que me ha pasado 🌹.<br><br>
+  Mi niña, hay tantas cosas bonitas que quiero decirte 🌹… porque sin duda tú mereces todo lo bonito del mundo 🌎💕. Estuve pensando 🤔, ¿qué hice para tener a alguien tan increíble como tú? 😍<br><br>
+  Cada vez que me llega un mensaje tuyo 📩 me pongo muy feliz 😊. Aunque hablemos poco en todo el día, tus mensajes me alegran tanto que a veces siento que voy a llorar de alegría 😭💕. Tú eres lo más preciado que Dios me mandó 🙏✨ y le agradezco por haberte puesto en mi vida 🌟.<br><br>
+  Sabes que me encantaría poder estar contigo 🧘‍♀️, dándote muchos abrazos 🤗 y cariño 💕… pero aunque estemos lejos 😔🌌, quiero que sepas que siempre estaré aquí para ti 💌. Eres y siempre serás mi princesa favorita 👑💕.<br><br>
+  Me gusta todo de ti ✨, eres maravillosa 🌺, increíble 🌟 y nunca dejes que nadie te diga lo contrario 🚫❤️.<br><br>
+  Gracias por hacerme la persona más feliz del mundo, en este tiempo que llevo hablando contigo 🕰💕. No sé cómo expresar todo lo que siento por ti ☁️❤️… un simple “te amo” 💘 no es suficiente.<br><br>
+  En serio, mi niña, te agradezco por todo 🙏💖. (No es una despedida, así que no llores 🤔👉👩). Gracias por estar conmigo, por siempre sacarme una sonrisa 😊 con tus mensajes lindos 🌸… aunque a veces no tengamos muchos temas de conversación 📝, siempre amaré hablar contigo 💕.<br><br>
+  Mi vida es tan hermosa porque formas parte de ella 🌹✨. Nunca habrá alguien que me haga sentir como tú me haces sentir 💓.<br><br>
+  TE PROMETO HACERTE LA NIÑA MÁS FELIZ DEL MUNDO 💍💘👑
+</p>  
+
+<div class="corazon-unico">
+  <div class="img-container left">
+    <img src="fotofondo1.png" alt="Foto 1">
+  </div>
+  <div class="img-container right">
+    <img src="fotofondo.png" alt="Foto 2">
+  </div>
+</div>
+
+<div class="fila">
+  <img src="captura1.png" alt="Recuerdo 1">
+  <img src="captura2.png" alt="Recuerdo 2">
+  <img src="captura3.png" alt="Recuerdo 3">
+</div>
+
+<audio id="musica" autoplay loop muted>
+  <source src="AxelTeVoyAAmar.mp3" type="audio/mpeg">
+  Tu navegador no soporta el audio 🎶
+</audio>
+
+<script>
+  window.addEventListener("load", () => {
+    const audio = document.getElementById("musica");
+    setTimeout(() => { audio.muted = false; }, 500);
+  });
+</script>
+</body>
+</html>

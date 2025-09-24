@@ -1,16 +1,52 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feliz Cumpleaños</title>
-    
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feliz Cumpleaños</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Botón centrado abajo */
+    #btnSorpresa {
+      position: fixed;
+      bottom: 300px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 12px 20px;
+      background: crimson;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.5s; /* transición suave */
+      z-index: 10;
+      opacity: 0; /* empieza invisible */
+    }
+
+    #btnSorpresa:hover {
+      background: gold;
+      color: black;
+    }
+  </style>
 </head>
 <body>
   
-<canvas id=c></canvas>
+  <canvas id="c"></canvas>
+  <button id="btnSorpresa">💌 Ver Sorpresa</button>
 
-<script src="app.js"></script>
+  <script src="app.js"></script>
+  <script>
+    // Hace que el botón aparezca después de 5 segundos
+    window.addEventListener("load", function() {
+      setTimeout(function() {
+        document.getElementById("btnSorpresa").style.opacity = 1;
+      }, 5000); // 5000 ms = 5 segundos
+    });
+
+    document.getElementById("btnSorpresa").addEventListener("click", function() {
+      window.open("sorpresa.html", "_blank");
+    });
+  </script>
 </body>
 </html>
